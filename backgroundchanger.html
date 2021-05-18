@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>background flipper</title>
+    <style>
+        h1{
+            text-align: center;
+            
+        }
+        body{
+            margin:0px;
+            padding: 20px 100px;
+        }
+        img{
+            width:100%;
+            height: 500px;
+            margin:0 auto;
+        }
+        p{
+            font-size: 18px;
+            text-align: justify;
+        }
+        .cls{
+             width:20px;
+             height:20px;
+             display:inline-block;
+             border:solid grey 2px;
+             border-radius: 50%;
+             cursor:pointer;
+        }
+        #lightblue{
+            background-color:lightblue;
+        }
+        #black{
+            background-color: black;
+        }
+        #white{
+            background-color: white;
+        }
+        #maroon{
+            background-color: maroon;
+        }
+        #color{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="color">
+        <span class="cls" id="lightblue" onclick="changeBG('#ADD8E6')"></span>
+        <span class="cls" id="maroon" onclick="changeBG('#800000')"></span>
+        <span class="cls" id="white" onclick="changeBG('#ffffff')"></span>
+        <span class="cls" id="black" onclick="changeBG('#000000')"></span>
+    </div>
+    <h1 class="error">Mickey Mouse</h1>
+    <img src="wp3051771-mickey-mouse-hd-wallpapers.jpg" alt="">
+    <p class="error">
+        Mickey Mouse is a cartoon character created in 1928 by The Walt Disney Company, who also serves as the brand's mascot. An anthropomorphic mouse who typically wears red shorts, large yellow shoes, and white gloves, Mickey is one of the world's most recognizable fictional characters.
+
+        Created as a replacement for a prior Disney character, Oswald the Lucky Rabbit, Mickey first appeared in the short Plane Crazy, debuting publicly in the short film Steamboat Willie (1928), one of the first sound cartoons. He went on to appear in over 130 films, including The Band Concert (1935), Brave Little Tailor (1938), and Fantasia (1940). Mickey appeared primarily in short films, but also occasionally in feature-length films. Ten of Mickey's cartoons were nominated for the Academy Award for Best Animated Short Film, one of which, Lend a Paw, won the award in 1942. In 1978, Mickey became the first cartoon character to have a star on the Hollywood Walk of Fame.
+        
+        Beginning in 1930, Mickey has also been featured extensively in comic strips and comic books. The Mickey Mouse comic strip, drawn primarily by Floyd Gottfredson, ran for 45 years. Mickey has also appeared in comic books such as Mickey Mouse, Disney Italy's Topolino and MM – Mickey Mouse Mystery Magazine, and Wizards of Mickey. Mickey also features in television series such as The Mickey Mouse Club (1955–1996) and others. He appears in other media such as video games as well as merchandising, and is a meetable character at the Disney parks.
+        
+        Mickey generally appears alongside his girlfriend Minnie Mouse, his pet dog Pluto, his friends Donald Duck and Goofy, and his nemesis Pete, among others (see Mickey Mouse universe). Though originally characterized as a cheeky lovable rogue, Mickey was rebranded over time as a nice guy, usually seen as an honest and bodacious hero. In 2009, Disney began to rebrand the character again by putting less emphasis on his friendly, well-meaning persona and reintroducing the more adventurous and stubborn sides of his personality, beginning with the video game Epic Mickey.   
+    </p>
+    <script>
+    function changeBG(e){
+        document.body.style.backgroundColor = e;
+        let err = document.getElementsByClassName("error")
+        
+        if(e == "#000000"){
+         for(let elm of err){
+             elm.style.color = "white";
+         }     
+        }
+        else if(e == "#800000"){
+            for(let elm of err){
+             elm.style.color = "white";
+         }  
+        }
+        else{
+            for(let elm of err){
+             elm.style.color = "black";
+         }   
+        }
+    }
+    </script>
+</body>
+</html>
